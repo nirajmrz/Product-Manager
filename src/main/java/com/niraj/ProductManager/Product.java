@@ -8,6 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class Product {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String brand;
@@ -27,8 +29,7 @@ public class Product {
 		this.price = price;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
 	public int getId() {
 		return id;
 	}
